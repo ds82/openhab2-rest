@@ -23,6 +23,6 @@ const transformEvent = e => {
 };
 
 export function events(url) {
-  const source = new EventSource(`${url}/rest/events?type=json`);
+  const source = new EventSource(`${url}/events?type=json`);
   return Observable.fromEvent(source, 'message').map(transformEvent);
 }
