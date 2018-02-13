@@ -16,8 +16,8 @@ const transformEvent = e => {
   return {
     name,
     source,
-    value: view(valuePath, data),
-    oldValue: view(oldValuePath, data),
+    state: view(valuePath, data),
+    oldState: view(oldValuePath, data),
     type: view(typePath, data)
   };
 };
