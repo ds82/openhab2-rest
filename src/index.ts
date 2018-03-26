@@ -5,10 +5,10 @@ import { state } from './state';
 const makeUrl = url => `${url}/rest`;
 
 export function open(url) {
-  url = makeUrl(url);
+  const fullUrl = makeUrl(url);
   return {
-    events$: events(url),
-    items: items(url),
-    getState: state(url)
+    events$: events(fullUrl),
+    items: items(fullUrl),
+    getState: state(fullUrl)
   };
 }
